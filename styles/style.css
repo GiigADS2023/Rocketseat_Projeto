@@ -1,0 +1,141 @@
+/*Universal aplica para todos eles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    /*Caixinha com variáveis dentro*/
+    --border: 1px solid #ffffff1a;
+}
+
+body, table, input, button {
+    /*300 - peso da fonte. 16px/Largura da linha*/
+    font: 300 16px/140% 'Roboto', sans-serif;
+}
+
+body {
+    /*Estilo da fonte
+    font: 16px sans-serif; */
+    background-color: #121214;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 20px 32px; /*Espaços nas laterais*/
+}
+
+header {
+    padding: 20px 0;
+}
+
+form {
+    border: var(--border); /*Aplica nos quatro cantos*/
+    border-inline: none; /*Retira nas laterais*/
+}
+
+fieldset {
+    border: none;
+    margin: 15px;
+}
+
+/*Quando usa > ele pega o primeiro div*/
+fieldset > div {
+    display: flex;
+    gap: 12px;
+}
+
+/*Como tem > div > div há também o seletor(class)*/
+.input-wrapper {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: var(--border);
+    border-radius: 10px; /*Arredona as bordas*/
+
+    padding: 8px 12px;
+
+    font: 400 14px/150% 'Roboto', sans-serif;
+    color: #c4c4cc;
+}
+
+input {
+    all: unset;
+}
+
+fieldset legend, section h2 {
+    font: 700 16px/140% 'Roboto', sans-serif;
+    color: #e1e1e6;
+    padding-bottom: 16px;
+}
+
+/*Procura o botão*/
+fieldset button {
+    width: fit-content; /*Encaixar no seu conteúdo*/
+    border: 0;
+    background-color: #f48f56;
+    border-radius: 10px;
+    padding: 7px 20px;
+
+    font: 700 12px/24px 'Roboto', sans-serif;
+    color: #00292e;
+}
+
+fieldset button:hover {
+    background: #f37c37;
+}
+
+.lista-participantes > div {
+    border: var(--border);
+    border-radius: 8px;
+}
+
+table {
+    /* é uma propriedade CSS que especifica que as bordas de células de uma tabela devem ser mescladas 
+    e exibidas como uma única borda, eliminando espaços entre elas.*/
+    border-collapse: collapse;
+}
+
+table thead { /*seleciona o cabeçalho de uma tabela*/
+    font-size: 14px;
+    line-height: 16px;
+}
+
+thead th, tbody td {
+    padding: 12px 16px;
+}
+  
+tbody td {
+    border-top: var(--border);
+    font-size: 13px;
+    line-height: 15px;
+    color: #c4c4cc;
+}
+  
+tbody td strong {
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+  
+tbody td small {
+    font-size: 12px;
+    line-height: 16px;
+}
+  
+tbody td button {
+    all: unset;
+    color: #9FF9CC;
+}
+  
+tbody td button:hover {
+    text-decoration: underline;
+}
+  
